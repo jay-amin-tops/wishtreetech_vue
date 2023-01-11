@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="inp" class="inp-class" id="inp">
+    <input type="button" value="getData" name="btn" id="btn">
+    <script>
+        document.getElementById("btn").addEventListener("click",function () {
+            console.log("called");
+            // inpData = document.getElementById("inp");
+            // inpData = document.getElementById("inp").value;
+            // console.log(inpData);
+            // inpData = document.getElementById("inp");
+            // inpData = document.getElementsByClassName("inp-class")
+            // console.log(inpData);
+            // console.log(inpData[0]);
+            // console.log(inpData[0].value);
+            // inpData = document.getElementsByName("inp")
+            // console.log(inpData);
+            // console.log(inpData[0]);
+            // console.log(inpData[0].value);
+            // inpData = document.getElementsByTagName("input")
+            // console.log(inpData);
+            // console.log(inpData[0]);
+            // console.log(inpData[0].value);
+            // inpData = document.getElementsByTagNameNS("input")
+            // console.log(inpData);
+            // inpData = document.querySelector(".inp-class")
+            // inpData = document.querySelector("input")
+            // console.log(inpData);
+            // console.log(inpData.value);
+            inpData = document.querySelectorAll("input")
+            console.log(inpData);
+            console.log(inpData[0].value);
+
+        })
+    </script>
+</body>
+</html>

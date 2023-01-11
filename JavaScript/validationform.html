@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <label for="username">UserName</label>
+        <input type="text" onblur="checkreq()" name="username" id="username">
+        <span id="usernameerror">*</span>
+        <br>
+        <label for="password">password</label><input type="password" onblur="checkreq()" name="password" id="password"><span id="passworderror">*</span><br>
+        <label for="email">email</label><input type="email" onblur="checkreq()" name="email" id="email"><span id="emailerror">*</span><br>
+        <label for="mobile">mobile</label><input type="tel" onblur="checkreq()" name="mobile" id="mobile"><span id="mobileerror">*</span><br>
+    </form>
+    <script>
+        function checkreq() {
+            // console.log("called");
+            let uname = document.getElementById("username")
+            // console.log(uname.value);
+            if (uname.value == "") {
+                document.getElementById("usernameerror").innerHTML = "<b>This field is required</b>"
+                // document.getElementById("usernameerror").innerText = "<b>This field is required</b>"
+                console.log("this field is required");
+            }else{
+                document.getElementById("usernameerror").innerHTML = ""
+            }
+        }
+    </script>
+</body>
+</html>
