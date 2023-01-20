@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class ParentClass {
+            parentPublicDM = "Parent Public DM"
+            _parentProtectedDM = "Parent protected DM"
+            #parentPrivateDM = "Parent Private DM"
+        }
+        class ChildClass extends ParentClass {
+            accessParentMethod(){
+                console.log(this.parentPublicDM); 
+                console.log(this._parentProtectedDM); 
+                // console.log(this.#parentPrivateDM); //Private field '#parentPrivateDM' must be declared in an enclosing class
+
+            }
+        }
+        let ChildClassObject = new ChildClass
+        console.log(ChildClassObject.parentPublicDM); 
+        console.log(ChildClassObject._parentProtectedDM); 
+        console.log(ChildClassObject.accessParentMethod()); 
+        // console.log(ChildClassObject.#parentPrivateDM ); 
+
+    </script>
+</body>
+
+</html>

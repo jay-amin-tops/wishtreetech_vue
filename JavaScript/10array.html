@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<ul>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat"><code>concat()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin"><code>copyWithin()</code></a>
+    </li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every"><code>every()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"><code>filter()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat"><code>flat()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap"><code>flatMap()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"><code>forEach()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf"><code>indexOf()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf"><code>lastIndexOf()</code></a>
+    </li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"><code>map()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce"><code>reduce()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight"><code>reduceRight()</code></a>
+    </li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse"><code>reverse()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"><code>slice()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some"><code>some()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"><code>sort()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>splice()</code></a></li>
+</ul>
+
+
+<ul>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat"><code>concat()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"><code>filter()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat"><code>flat()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap"><code>flatMap()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"><code>map()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"><code>slice()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>splice()</code></a> (to
+        construct the array of removed elements that's returned)</li>
+</ul>
+
+
+<ul>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin"><code>copyWithin()</code></a>
+    </li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill"><code>fill()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"><code>pop()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push"><code>push()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse"><code>reverse()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift"><code>shift()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"><code>sort()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>splice()</code></a></li>
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift"><code>unshift()</code></a></li>
+</ul>
+
+<body>
+    <script>
+        // let arr = [50,"Test",true,50.12]
+        // let Marks = [50,80,90,95]
+        let Marks = [50, 80, 90, 95]
+        // let Marks = {'Maths':50,"Eng":80,"Sci":90,"Comp":95}
+        // console.log(Marks);
+        // console.log(Marks[0]);
+        // console.log(Marks[2]);
+        for (let index = 0; index < Marks.length; index++) {
+            const element = Marks[index];
+            console.log(element);
+        }
+
+
+        const elements = ['Fire', 'Air', 'Water'];
+
+        console.log(elements.join());
+        // Expected output: "Fire,Air,Water"
+
+        console.log(elements.join(''));
+        // Expected output: "FireAirWater"
+
+        console.log(elements.join('-'));
+        // Expected output: "Fire-Air-Water"
+
+
+        const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+        // console.log(animals);
+        // console.log(animals.pop());
+        // console.log(animals);
+        console.log(animals.slice(2));
+        // Expected output: Array ["camel", "duck", "elephant"]
+
+        console.log(animals.slice(2, 4));
+        // Expected output: Array ["camel", "duck"]
+
+        console.log(animals.slice(1, 5));
+        // Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+        console.log(animals.slice(-2));
+        // Expected output: Array ["duck", "elephant"]
+
+        console.log(animals.slice(2, -1));
+        // Expected output: Array ["camel", "duck"]
+
+        console.log(animals.slice());
+        // Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+
+        const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+        console.log(beasts.indexOf('bison'));
+        // Expected output: 1
+
+        // Start from index 2
+        console.log(beasts.indexOf('bison', 2));
+        // Expected output: 4
+
+        console.log(beasts.indexOf('giraffe'));
+        // Expected output: -1
+
+        const count = animals.push('cows');
+        console.log(count);
+        // Expected output: 4
+        console.log(animals);
+        // Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+        animals.push('chickens', 'cats', 'dogs');
+        console.log(animals);
+        // Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+
+
+        const months = ['Jan', 'March', 'April', 'June'];
+        months.splice(1, 0, 'Feb');
+        // Inserts at index 1
+        console.log(months);
+        // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+        months.splice(4, 1, 'May');
+        // Replaces 1 element at index 4
+        console.log(months);
+        // Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+
+        const isBelowThreshold = (currentValue) => {
+            console.log("currentValue", currentValue);
+            currentValue < 40;
+        }
+        // function isBelowThreshold(params) {
+        //     console.log(params);   
+        // }
+        const array1 = [100, 30, 39, 29, 10, 13];
+        array1.every(isBelowThreshold)
+        // console.log(array1.every(isBelowThreshold));
+
+
+
+        let arr = [1, 5, 3, 4];
+
+        for (const key in arr) {
+            console.log("in arr ",key);
+        }
+        for (const iterator of arr) {
+            console.log("Data",iterator);
+        }
+        arr.every((elem, index, arr) => {
+            arr[index + 1]--;
+            console.log(`[${arr}][${index}] -> ${elem}`);
+            return elem < 3;
+        });
+    </script>
+</body>
+
+</html>

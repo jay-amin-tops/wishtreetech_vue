@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>this keyword represent itselfs object</p>
+    <script>
+        class MAthOp{
+            something = "testing" // Data Member
+            // Member function START
+            othermethodofsameclass() {
+                return "response from other method"
+            }
+            addition(a,b) {
+                // console.log(something);  //Uncaught ReferenceError: something is not defined
+                console.log(this.something); 
+                console.log(this.othermethodofsameclass()); 
+                return a+b
+            }
+            // Member function END
+        }
+        let MAthOpOb = new MAthOp;
+        console.log(MAthOpOb);
+        MAthOpOb.addition()
+    </script>
+</body>
+</html>
