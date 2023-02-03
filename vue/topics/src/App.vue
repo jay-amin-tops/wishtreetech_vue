@@ -1,67 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloW/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <!-- <HelloW/>
+  <CustomCardWithData/> -->
   <div class="container">
-    <div class="row"> 
-      <div class="col">
-        <CustomCard cardtitle="Believing is seeing"/>
-      </div>
-      <div class="col">
-        <CustomCard cardtitle="Believing is seeing"/>
-      </div>
-      <div class="col">
-        <CustomCard cardtitle="Believing is seeing"/>
-      </div>
-      <div class="col">
-        <CustomCard cardtitle="Believing is seeing"/>
-      </div>
-      <div class="col">
-        <CustomCard cardtitle="Believing is seeing"/>
-      </div>
-    </div>
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/about">About us</router-link>
   </div>
+  <router-view ></router-view>
 </template>
 
 <script>
-import HelloW from './components/HelloWorld.vue'
-import CustomCard from './components/CustomCard'
-
+// import HelloW from './components/01HelloWorld.vue'
+// import CustomCard from './components/02CustomCard'
+// import CustomCardWithData from './components/03CustomCardWithData'
+// import BindAttribute from './components/04BindAttribute'
+// import Conditions from './components/05Conditions'
+// import ComputedExample from './components/06computedCompo'
+// import GetterSetter from './components/07getterSetter'
+// import ConditionalRendering from './components/08ConditionalRendering'
+// import ClickHandle from './components/09ClickHandle'
+// HelloW,
+// CustomCard,
+// CustomCardWithData,
 export default {
   name: 'App',
   components: {
-    HelloW,
-    CustomCard
   }
 }
 </script>
 
 
 <style scoped>
-.container{
-  width:1100px;
-  margin:0 auto;
-}
-.d-flex{
-  display:flex;
-}
-.col{
-  width:22%;
-  margin:10px;
-  /* display:inline; */
-  /* display:inline-block; */
-  /* border:1px solid; */
-  /* padding:50px; */
-}
-.row{
-  display:flex;
-  flex-wrap: wrap;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  /* text-align: center; */
-  margin-top: 60px;
-}
+
 </style>
