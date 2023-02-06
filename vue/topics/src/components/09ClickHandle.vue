@@ -9,6 +9,11 @@ import { reactive,nextTick } from 'vue'
 // import DirectData from './customData'
 
 export default {
+  data() {
+    return {
+      counter:0,
+    }
+  },
   setup() {
     console.log("setup called");
   const koibhi = reactive({ count: 0,otherdata:"sr" })
