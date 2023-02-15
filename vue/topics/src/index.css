@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.tw-text-left {
+    text-align: left;
+  }
+  .tw-text-center {
+    text-align: center;
+  }
+  .tw-text-right {
+    text-align: right;
+  }

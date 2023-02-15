@@ -1,4 +1,5 @@
 <template>
+<HeaderComponent/>
   <div class="home">
   Home page
   </div>

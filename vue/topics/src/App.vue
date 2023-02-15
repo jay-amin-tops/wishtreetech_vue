@@ -6,14 +6,12 @@
     <ul class="menu-items">
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/about">About us</router-link></li>
+      <li><router-link to="/example">Example</router-link></li>
     </ul>
   </nav>
   <div class="container m-auto">
-    <ul>
-      <li><router-link class="link" to="/lifecycle">Life Cycle</router-link></li>
-      <li><router-link class="link" to="/watcher">Watcher</router-link></li>
-      <li><router-link class="link" to="/compouted">computed</router-link></li>
-    </ul>
+  
+  <HeaderComponent/>
 
     <router-view ></router-view>
   </div>
