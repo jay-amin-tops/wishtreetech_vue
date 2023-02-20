@@ -14,7 +14,7 @@
             <li><router-link class="link" to="/example/parentchild">ParentChild Data access</router-link></li>
             <li><router-link class="link" to="/example/compocomposition">Component Loop</router-link></li>
             <li><router-link class="link" to="/example/storedata">Component Store Data</router-link></li>
-            
+            <li><router-link class="link" to="/example/typescript">Typescript</router-link></li>
         </ul>
         <router-view ></router-view>
     </div>

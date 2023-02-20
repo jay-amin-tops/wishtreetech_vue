@@ -1,0 +1,45 @@
+1) create app
+	vue create app-name
+2) select custom option for typescript support
+
+3) install router
+	npm install --save vue-router
+4) install tailwindcss 
+	npm install -D tailwindcss
+5) Create your configuration files (tailwind.config.js and postcss.config.js) 
+	npx tailwindcss init -p
+6) refer from official site = https://v2.tailwindcss.com/docs/guides/vue-3-vite
+
+
+
+
+Note : for 1:1  error  Component name "About" should always be multi-word  vue/multi-word-component-names Error
+add 
+
+ rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'vue/multi-word-component-names': 0,
+  }
+
+in eslintrc.js
+
+
+
+
+
+OR
+
+
+
+
+npm init vire -- --template vue-ts app-name
+cd app-name
+npm i
+npm run dev
+
+
+npm install vue-route
+
+npm install -D tailwindcss
+
