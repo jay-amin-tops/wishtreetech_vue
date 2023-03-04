@@ -3,13 +3,14 @@ import HomeView from '../views/HomeView.vue'
 import LifeCycle from "../views/11LifeCycle.vue"
 import WatcherExample from "../views/13WatcherExample.vue"
 import ComputedReactive from "../views/14ComputeReactive.vue"
-import ExampleCompo from "../views/ExampleCompo.vue"
+import Example from "../views/ExampleCompo.vue"
 import Tailwaind from "../views/15Tailwaind.vue"
 import Timeoutonmount from "../views/16timeoutLifeCycle.vue"
 import ParentChildData from "../views/17parentChildDataAccess.vue"
 import ComponentComposition from "../views/19ComponentComposition.vue"
 import StoreComponentData from "../views/21StoreDataMultipleCompo.vue"
 import TypeScriptExample from "../views/22TypeScriptExample.vue"
+import FallthroughAttributes from "../views/23FallthroughAttributes.vue"
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -26,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/example",
-    component: ExampleCompo,
+    component: Example,
     children: [{
         path: 'watcher',
         component: WatcherExample,
@@ -54,6 +55,9 @@ const routes: Array<RouteRecordRaw> = [
     },{
         path:'typescript',
         component: TypeScriptExample,
+    },{
+        path:'fallthroughattributes',
+        component: FallthroughAttributes,
     }
     ],
 }

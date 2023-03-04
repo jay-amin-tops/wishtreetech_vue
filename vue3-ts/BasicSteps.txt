@@ -13,20 +13,6 @@
 
 
 
-Note : for 1:1  error  Component name "About" should always be multi-word  vue/multi-word-component-names Error
-add 
-
- rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'vue/multi-word-component-names': 0,
-  }
-
-in eslintrc.js
-
-
-
-
 
 OR
 
@@ -43,3 +29,16 @@ npm install vue-route
 
 npm install -D tailwindcss
 
+
+
+
+
+
+Note : for 1:1  error  Component name "About" should always be multi-word  vue/multi-word-component-names Error
+add 
+
+  "rules": {
+      "vue/multi-word-component-names":0, 
+    }
+
+in pacakge.json
