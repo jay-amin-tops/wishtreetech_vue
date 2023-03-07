@@ -2,10 +2,6 @@
 import { ref } from 'vue';
 import { DateTime } from 'luxon';
 import { Post, today, thisWeek, thisMonth } from "../posts.ts";
-// import Data from "../posts.ts";
-// console.log(Data);
-// console.log(Data.thisMonth);
-// return false
 const periods=["Today","This Week","This Month"] as const
 type Period = typeof periods[number]
 const selectedPeriod = ref<Period>("Today")
@@ -13,28 +9,42 @@ function selectPeriod(period:Period) {
   console.log("called");
   selectedPeriod.value = period
 }
+// const posts:Post[]=[today,thisWeek,thisMonth] //simple string
 //For Date Formate
-// const posts:Post[]=["today","thisWeek","thisMonth"]  //simple string
-const posts:Post[]=[today,thisWeek,thisMonth].map(anything=>{
+const posts:Post[]=[today,thisWeek,thisMonth]
+.map(post=>{
   return{
-    ...anything,created:DateTime.fromISO(anything.created)
+    ...post,created:DateTime.fromISO(post.created)
   }
 }) 
+.filter(post=>{
+  console.log("selectedPeriod",selectedPeriod);
+  
+  if (selectedPeriod.value === "Today") {
+    return post.created>= DateTime.now().minus({day:1})
+  }
+  if (selectedPeriod.value === "This Week") {
+    return post.created>= DateTime.now().minus({week:1})
+  }
+  return post
+})
 </script>
 <template>
-<hr>
-  <a v-for="period of periods"
-  :key = "period"
-  :class = "{'is-active':period == selectedPeriod}"
-  @click="selectPeriod(period)"> {{ period }}</a>
-<hr>
 
+<a v-for="period of periods"
+:key = "period"
+:class = "{'is-active':period == selectedPeriod}"
+@click="selectPeriod(period)"
+
+>
+  {{ period }}
+</a>
 
  <a v-for="post of posts" :key=
  post.id class="panel">
   {{post.title}}
   <!-- {{post.created}} -->
-  {{post.created.toFormat("d-MMM-y")}}
+  {{post.created.toFormat("d MMM")}}
  </a>
 </template>
 

@@ -23,7 +23,6 @@ const posts:Post[]= computed(()=>{
 }) 
 .filter(post=>{
   console.log("selectedPeriod",selectedPeriod);
-  
   if (selectedPeriod.value === "Today") {
     return post.created>= DateTime.now().minus({day:1})
   }

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { DateTime } from 'luxon';
-import { Post, today, thisWeek, thisMonth } from "../posts.ts";
+import { TimeLinePost, today, thisWeek, thisMonth } from "../posts.ts";
 const periods=["Today","This Week","This Month"] as const
 type Period = typeof periods[number]
 const selectedPeriod = ref<Period>("Today")
@@ -11,13 +11,15 @@ function selectPeriod(period:Period) {
 }
 // const posts:Post[]=[today,thisWeek,thisMonth] //simple string
 //For Date Formate
-const posts:Post[]=[today,thisWeek,thisMonth]
+const posts= computed<TimeLinePost[]>(()=>{
+  return [today,thisWeek,thisMonth]
 .map(post=>{
   return{
     ...post,created:DateTime.fromISO(post.created)
   }
-}) .filter(post=>{
-  console.log("selectedPeriod",selectedPeriod.value);
+}) 
+.filter(post=>{
+  console.log("selectedPeriod",selectedPeriod);
   
   if (selectedPeriod.value === "Today") {
     return post.created>= DateTime.now().minus({day:1})
@@ -27,6 +29,7 @@ const posts:Post[]=[today,thisWeek,thisMonth]
   }
   return post
 })
+}) 
 </script>
 <template>
 
@@ -34,17 +37,10 @@ const posts:Post[]=[today,thisWeek,thisMonth]
 :key = "period"
 :class = "{'is-active':period == selectedPeriod}"
 @click="selectPeriod(period)"
-
 >
   {{ period }}
 </a>
 
- <a v-for="post of posts" :key=
- post.id class="panel">
-  {{post.title}}
-  <!-- {{post.created}} -->
-  {{post.created.toFormat("d MMM")}}
- </a>
 </template>
 
 <style>
