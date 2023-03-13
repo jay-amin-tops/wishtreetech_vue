@@ -11,7 +11,8 @@ defineProps<{
     
  <a class="panel">
   <a>{{post.title}}</a>
+  <a>{{post.id}}</a>
   <!-- {{post.created}} -->
-  <div>{{post.created.toFormat("d MMM")}}</div>
+  <!-- <div>{{post.created.toFormat("d MMM")}}</div> -->
  </a>
 </template>

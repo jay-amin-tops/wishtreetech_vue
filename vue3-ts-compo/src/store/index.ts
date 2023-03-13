@@ -5,9 +5,9 @@ export default createStore({
   },
   getters: {
   },
-  mutations: {
-  },
   actions: {
+  },
+  mutations: {
   },
   modules: {
   }

@@ -66,7 +66,10 @@ const routes: Array<RouteRecordRaw> = [
     },{
         path:'piniastorestructure',
         component: TimeLinePiniaStructure,
-    }
+    },{
+        path: 'fetchapidata',
+        component: () => import('../views/32timelineFetchApiExtractingComplexity.vue'),
+    },
     ],
 }
 ]

@@ -18,6 +18,7 @@
             <li><router-link class="link" to="/example/fallthroughattributes">Fallthrough Attributes</router-link></li>
             <li><router-link class="link" to="/example/piniastore">Pinia Store</router-link></li>
             <li><router-link class="link" to="/example/piniastorestructure">Pinia Store Structure</router-link></li>
+            <li><router-link class="link" to="/example/fetchapidata">Pinia Store API</router-link></li>
         </ul>
         <router-view ></router-view>
     </div>

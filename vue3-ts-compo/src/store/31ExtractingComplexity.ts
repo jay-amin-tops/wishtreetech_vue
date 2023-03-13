@@ -26,8 +26,7 @@ export const usePosts = defineStore("posts", {
   getters: {
     filteredPost: (state): TimelinePost[] => {
       //   const posts = computed(() => {
-      return state.ids
-        .map((id) => {
+      return state.ids.map((id) => {
           const post = state.all.get(id);
           if (!post) {
             throw new Error(`Post with id of ${id} was expected but not found`);

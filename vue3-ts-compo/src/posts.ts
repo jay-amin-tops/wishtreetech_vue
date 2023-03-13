@@ -5,10 +5,25 @@ export interface Post {
   title: string
   created: string
 }
-
 export interface TimelinePost extends Omit<Post ,'created'>{
   created:DateTime
 }
+// export interface Post {
+//   id: string
+//   title: string
+//   created: DateTime
+// }
+
+
+export interface PostFetch {
+  id: string
+  userId: string
+  title: string
+}
+export interface UserIdPost extends Omit<PostFetch ,'id'>{
+  id:string
+}
+
 
 export const today: Post = {
   id: "1",

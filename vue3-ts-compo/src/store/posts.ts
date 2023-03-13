@@ -5,7 +5,7 @@ interface PostsState{
 }
 export const usePosts = defineStore("posts",{
     state:():PostsState=>({
-        foo:"foo"
+        foo:"checking for foo"
     }),
     actions:{
         updateFoo(anything:string){
